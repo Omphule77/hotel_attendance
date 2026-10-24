@@ -1,0 +1,38 @@
+services:
+  # -------------------------------------------------------------
+  # Backend Service (Spring Boot + Java 21)
+  # -------------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: hotel-backend
+    restart: unless-stopped
+    environment:
+      - SPRING_DATA_MONGODB_URI=${SPRING_DATA_MONGODB_URI:-mongodb+srv://omphule77_db_user:Omphule77@cluster0.xwlfth2.mongodb.net/}
+      - SPRING_DATA_MONGODB_DATABASE=${SPRING_DATA_MONGODB_DATABASE:-hotel_attendance}
+      - JAVA_OPTS=-Xms256m -Xmx512m -XX:+UseG1GC
+    ports:
+      - "8080:8080"
+    networks:
+      - hotel-network
+
+  # -------------------------------------------------------------
+  # Frontend Service (React Vite + Nginx Reverse Proxy)
+  # -------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: hotel-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - hotel-network
+
+networks:
+  hotel-network:
+    driver: bridge

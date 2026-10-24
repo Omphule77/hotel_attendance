@@ -1,0 +1,112 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "mobile": "9876543210",
+      "password": "admin123",
+      "username": "admin",
+      "full_name": "व्यवस्थापक (Admin)",
+      "created_at": "2026-10-15 14:21:45.000000",
+      "hotel_name": "हॉटेल व्यवस्थापन"
+    },
+    {
+      "id": 2,
+      "mobile": "9272317315",
+      "password": "mahesh123",
+      "username": "mahesh",
+      "full_name": "महेश यादव",
+      "created_at": "2026-10-15 14:23:39.000000",
+      "hotel_name": "हॉटेल अध्यक्ष"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "विकास दुबे",
+      "role": "मदतनीस / किचन हेल्पर",
+      "mobile": "6374627363",
+      "status": "ACTIVE",
+      "address": "कानपूर",
+      "created_at": "2026-10-15 14:25:19.000000",
+      "updated_at": "2026-10-15 14:25:19.000000",
+      "salary_type": "DAILY",
+      "joining_date": "2026-10-15",
+      "per_hour_rate": 62.5,
+      "salary_amount": 500.0
+    },
+    {
+      "id": 2,
+      "name": "महेश कुमार",
+      "role": "वेटर (Waiter)",
+      "mobile": "4736473627",
+      "status": "ACTIVE",
+      "address": "कानपूर",
+      "created_at": "2026-10-15 14:26:08.000000",
+      "updated_at": "2026-10-15 14:26:08.000000",
+      "salary_type": "DAILY",
+      "joining_date": "2026-10-15",
+      "per_hour_rate": 125.0,
+      "salary_amount": 1000.0
+    }
+  ],
+  "attendance": [
+    {
+      "id": 1,
+      "notes": "",
+      "status": "HALF_DAY",
+      "created_at": "2026-10-15 14:26:42.000000",
+      "updated_at": "2026-10-15 14:48:53.000000",
+      "employee_id": 2,
+      "hours_worked": 8.0,
+      "attendance_date": "2026-10-15"
+    },
+    {
+      "id": 2,
+      "notes": "",
+      "status": "PRESENT",
+      "created_at": "2026-10-15 14:26:42.000000",
+      "updated_at": "2026-10-15 14:27:13.000000",
+      "employee_id": 1,
+      "hours_worked": 8.0,
+      "attendance_date": "2026-10-15"
+    },
+    {
+      "id": 3,
+      "notes": "",
+      "status": "PRESENT",
+      "created_at": "2026-10-15 14:37:43.000000",
+      "updated_at": "2026-10-15 14:37:43.000000",
+      "employee_id": 2,
+      "hours_worked": 8.0,
+      "attendance_date": "2026-10-16"
+    },
+    {
+      "id": 4,
+      "notes": "",
+      "status": "PRESENT",
+      "created_at": "2026-10-15 14:37:43.000000",
+      "updated_at": "2026-10-15 14:37:43.000000",
+      "employee_id": 1,
+      "hours_worked": 8.0,
+      "attendance_date": "2026-10-16"
+    }
+  ],
+  "salary_advances": [
+    {
+      "id": 1,
+      "amount": 200.0,
+      "reason": "मासिक उचल",
+      "created_at": "2026-10-15 14:27:58.000000",
+      "employee_id": 2,
+      "advance_date": "2026-10-01"
+    },
+    {
+      "id": 2,
+      "amount": 300.0,
+      "reason": "मासिक उचल",
+      "created_at": "2026-10-15 14:38:09.000000",
+      "employee_id": 1,
+      "advance_date": "2026-10-01"
+    }
+  ]
+}
